@@ -1,0 +1,17 @@
+[
+  {
+    "id": 0,
+    "name": "pasital",
+    "featured": false
+  },
+  {
+    "id": 1,
+    "name": "goldenglass",
+    "featured": false
+  },
+  {
+    "id": 2,
+    "name": "malerba",
+    "featured": true
+  }
+]
