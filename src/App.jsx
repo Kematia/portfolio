@@ -1,18 +1,29 @@
 import React, { Component } from 'react';
-import Header from './components/Header.jsx';
-import Main from './components/Main.jsx';
-import Footer from './components/Footer.jsx';
+import { Switch, Route } from "react-router-dom";
+
+import Home from './components/Home.jsx';
+import Error from './components/Error.jsx';
+import Navigation from './components/Navigation.jsx';
+import Portfolio from './components/Portfolio.jsx';
+import SinglePortfolioItem from './components/SinglePortfolioItem.jsx';
 
 class App extends Component {
-  render() {
-    return (
-      <React.Fragment>
-        <Header />
-        <Main />
-        <Footer />
-      </React.Fragment>
-    );
-  }
+    
+    render() {
+        return (
+            <>
+                <Navigation />
+                <Switch>
+                    <Route path="/" exact component={Home}/>
+                    <Route path="/portfolio" exact component={Portfolio}/>
+                    <Route path="/portfolio/:name" component={SinglePortfolioItem}/>
+                    <Route component={Error}/>
+                    
+                </Switch>
+
+            </>
+        )
+    }
 }
 
 export default App;
